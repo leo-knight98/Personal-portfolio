@@ -74,6 +74,8 @@ jobs:
         with:
           name: php-app
           path: .
+      - name: Azure Login
+        uses: Azure/login@v1
 
   deploy:
     permissions:
