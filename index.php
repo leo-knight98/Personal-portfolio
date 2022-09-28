@@ -7,6 +7,10 @@ $get = $_GET['pagina']; ?>
     <?php
         if($get == 'imagenes') {
             require_once('ejercicios/captura_imatges.php');
+        } else if($get == 'elementos-html') {
+            require_once('ejercicios/elementos_html.php');
+        } else if($get == 'complejidad-contrasenas') {
+            require_once('ejercicios/contrasenas.php');
         } else {
             require_once('template/main.php');
         }

@@ -169,6 +169,7 @@ nav ul li:hover .submenu{
 
 .right-main {
     width: 69%;
+    padding-left: 20px;
 }
 
 .right-main p {
@@ -179,8 +180,8 @@ nav ul li:hover .submenu{
 .tecnologias {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 20px;
+    /*justify-content: space-between;*/
+    margin: 0 20px 0 0;
 }
 
 .tecnologias div {
@@ -188,7 +189,7 @@ nav ul li:hover .submenu{
     border: 1px solid lightblue;
     border-radius: 10px;
     box-shadow: 10px 10px 5px lightblue;
-    margin-bottom: 20px;
+    margin: 0 40px 20px 0;
 }
 
 .tecnologias div img {

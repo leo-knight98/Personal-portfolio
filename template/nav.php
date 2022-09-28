@@ -17,6 +17,8 @@
                         <div class="submenu">
                             <ul>
                                 <li><a href="?pagina=imagenes">Captura de imágenes</a></li>
+                                <li><a href="?pagina=elementos-html">Generador de elementos HTML</a></li>
+                                <li><a href="?pagina=complejidad-contrasenas">Comprobador de complejidad de contraseñas</a></li>
                             </ul>
                         </div>
                     </li>
