@@ -34,8 +34,6 @@ $params = array(
 );
 
 function html_generate_checkBox($array) {
-    $label = '';
-    $input = '';
     $html = '';
 
     foreach($array as $key => $value) {

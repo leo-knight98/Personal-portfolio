@@ -12,6 +12,11 @@
         <div class="container">
             <nav id="nav-bar">
                 <span class="name"><a href="?pagina=home">Leo Mañach</a></span>
+                <div class="icon-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
                 <ul class="links">
                     <li class="menu">Mis trabajos
                         <div class="submenu">
@@ -19,6 +24,7 @@
                                 <li><a href="?pagina=imagenes">Captura de imágenes</a></li>
                                 <li><a href="?pagina=elementos-html">Generador de elementos HTML</a></li>
                                 <li><a href="?pagina=complejidad-contrasenas">Comprobador de complejidad de contraseñas</a></li>
+                                <li><a href="?pagina=cotizaciones">Cotizaciones Ibex 35</a></li>
                             </ul>
                         </div>
                     </li>

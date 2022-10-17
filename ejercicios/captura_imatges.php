@@ -13,7 +13,6 @@
 
 $codi = file_get_contents('https://www.freepik.es/search?format=search&query=coche');
 $pos_inici = strpos($codi, '<figure');
-//$pos_final = strpos($codi, '/>', $pos_inici);
 $figure = substr($codi, $pos_inici);
 $inici_link = 1;
 $images = array();

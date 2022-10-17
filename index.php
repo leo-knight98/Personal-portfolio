@@ -11,6 +11,8 @@ $get = $_GET['pagina']; ?>
             require_once('ejercicios/elementos_html.php');
         } else if($get == 'complejidad-contrasenas') {
             require_once('ejercicios/contrasenas.php');
+        } else if($get == 'cotizaciones') {
+            require_once('ejercicios/cotizaciones.php');
         } else {
             require_once('template/main.php');
         }
