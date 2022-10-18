@@ -1,10 +1,15 @@
 <?php
+$lang = '';
+
 if(isset($_GET['lang'])) {
     setcookie("lang", $_GET['lang'], time()+36000);
+    $lang = $_GET['lang'];
+} else if(isset($_COOKIE['lang'])) {
+    $lang = $_COOKIE['lang'];
 }
 
-if(isset($_COOKIE['lang'])) {
-    switch($_COOKIE['lang']) {
+if($lang != '') {
+    switch($lang) {
         case 'cat':
             require_once('idiomas/cat.php');
             break;
