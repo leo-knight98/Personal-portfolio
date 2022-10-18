@@ -28,6 +28,14 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="menu"><?php echo $idiomas ?></li>
+                    <li class="menu"><?php echo $idiomas ?>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="&lang=es"><?php echo $catalan ?></a></li>
+                                <li><a href="&lang=cat"><?php echo $spanish ?></a></li>
+                                <li><a href="&lang=en"><?php echo $english ?></a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </nav>
