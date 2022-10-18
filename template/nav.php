@@ -18,16 +18,16 @@
                     <div></div>
                 </div>
                 <ul class="links">
-                    <li class="menu">Mis trabajos
+                    <li class="menu"><?php echo $trabajos ?>
                         <div class="submenu">
                             <ul>
-                                <li><a href="?pagina=imagenes">Captura de imágenes</a></li>
-                                <li><a href="?pagina=elementos-html">Generador de elementos HTML</a></li>
-                                <li><a href="?pagina=complejidad-contrasenas">Comprobador de complejidad de contraseñas</a></li>
-                                <li><a href="?pagina=cotizaciones">Cotizaciones Ibex 35</a></li>
+                                <li><a href="?pagina=imagenes"><?php echo $captura ?></a></li>
+                                <li><a href="?pagina=elementos-html"><?php echo $generador ?></a></li>
+                                <li><a href="?pagina=complejidad-contrasenas"><?php echo $password ?></a></li>
+                                <li><a href="?pagina=cotizaciones"><?php echo $ibex ?></a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="menu">Idiomas</li>
+                    <li class="menu"><?php echo $idiomas ?></li>
                 </ul>
             </nav>

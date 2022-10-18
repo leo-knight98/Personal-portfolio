@@ -1,4 +1,27 @@
 <?php
+if(isset($_GET['lang'])) {
+    setcookie("lang", $_GET['lang'], time()+36000);
+}
+
+if(isset($_COOKIE['lang'])) {
+    switch($_COOKIE['lang']) {
+        case 'cat':
+            require_once('idiomas/cat.php');
+            break;
+        case 'es':
+            require_once('idiomas/es.php');
+            break;
+        case 'en':
+            require_once('idiomas/eng.php');
+            break;
+        default:
+            require_once('idiomas/cat.php');
+            break;
+    }
+} else {
+    require_once('idiomas/cat.php');
+}
+
 require_once('template/nav.php'); 
 require_once('template/header.php');
 
@@ -20,5 +43,3 @@ $get = $_GET['pagina']; ?>
 </div>
 
 <?php require_once('template/footer.php'); ?>
-                
-                
