@@ -86,7 +86,7 @@ function html_generate_select($options, $attrs) {
 $html = html_generate_checkBox($opc2);
 $select = html_generate_select($opc, $params);
 ?>
-
+<h1 class="title"><?php echo $generador ?></h1>
 <form method="post">
     <?php 
         echo $html;

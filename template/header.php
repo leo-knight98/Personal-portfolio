@@ -4,7 +4,7 @@
         <div class="div-img-me"><img src="img/leo.jpg" class="img-me" /></div>
         <div class="div-name">
             <h1 class="my-name">Leo Mañach Canet</h1>
-            <p>Desarrollador web</p>
+            <p><?php echo $dev ?></p>
         </div>
     </div>
 </div>

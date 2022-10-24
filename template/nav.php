@@ -31,9 +31,9 @@
                     <li class="menu"><?php echo $idiomas ?>
                         <div class="submenu">
                             <ul>
-                                <li><a href="?lang=cat"><?php echo $catalan ?></a></li>
-                                <li><a href="?lang=es"><?php echo $spanish ?></a></li>
-                                <li><a href="?lang=en"><?php echo $english ?></a></li>
+                                <li><a href="<?php echo '?' . build_url('ca') ?>"><?php echo $catalan ?></a></li>
+                                <li><a href="<?php echo '?' . build_url('es') ?>"><?php echo $spanish ?></a></li>
+                                <li><a href="<?php echo '?' . build_url('en') ?>"><?php echo $english ?></a></li>
                             </ul>
                         </div>
                     </li>

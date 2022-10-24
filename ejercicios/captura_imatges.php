@@ -8,7 +8,7 @@
     <link href="../styles.css" rel="stylesheet">
 </head>
 <body>
-    <div class="title"><h1>Captura de imágenes</h1></div>
+    <div class="title"><h1><?php echo $captura ?></h1></div>
 <?php
 
 $codi = file_get_contents('https://www.freepik.es/search?format=search&query=coche');

@@ -27,6 +27,15 @@ if($lang != '') {
     require_once('idiomas/cat.php');
 }
 
+function build_url($lang) {
+    $data['lang'] = $lang;
+    if(isset($_GET['pagina'])) {
+        $data['pagina'] = $_GET['pagina'];
+        return http_build_query($data);
+    }
+    return http_build_query($data);
+}
+
 require_once('template/nav.php'); 
 require_once('template/header.php');
 
