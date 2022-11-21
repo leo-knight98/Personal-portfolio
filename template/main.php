@@ -4,7 +4,7 @@
     <div class="right-main">
         <h1><?php echo $about ?></h1>
         <p><?php echo $text_me ?></p>
-        <h1>Tecnologías</h1>
+        <h1><?php echo $tecnologia ?></h1>
         <div class="tecnologias">
             <div class="left">
                 <img class="tecno" src="img/html.svg" />

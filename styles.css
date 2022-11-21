@@ -74,6 +74,15 @@ td.tabla7 {
     color: green;
 }
 
+.correct {
+    font-weight: bold;
+    background-color: lightgreen;
+    height: 30px;
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
 @media (min-width: 978px) {
     .container {
         position: absolute;
@@ -205,7 +214,7 @@ td.tabla7 {
     }
     
     .main-section {
-        padding-bottom: 50px;
+        padding-bottom: 70px;
     }
     
     .left-main {
@@ -290,7 +299,39 @@ td.tabla7 {
     .img img {
         max-width: 100%;
     }
-    
+
+    .form-contact {
+        width: 550px;
+        margin: 0 auto;
+        border: 2px solid lightblue;
+        border-radius: 25px;
+    }
+
+    .form-contact input, .form-contact textarea, .form-contact label {
+        margin-top: 5px;
+        width: 95%;
+        margin: 5px;
+    }
+
+    .register-form {
+        width: 550px;
+        margin: 0 auto;
+        border: 2px solid lightblue;
+        border-radius: 25px;
+        padding: 10px;
+    }
+
+    .register-form input, .register-form label, .register-form select {
+        margin: 10px 0;
+    }
+
+    .register-form input[type=text], .register-form input[type=password], .register-form input[type=file] {
+        width: 95%;
+    }
+}
+
+textarea {
+    resize: none;
 }
 
 

@@ -50,6 +50,10 @@ $get = $_GET['pagina']; ?>
             require_once('ejercicios/contrasenas.php');
         } else if($get == 'cotizaciones') {
             require_once('ejercicios/cotizaciones.php');
+        } else if($get == 'contact-me') {
+            require_once('ejercicios/contact.php');
+        } else if($get == 'register') {
+            require_once('ejercicios/registro.php');
         } else {
             require_once('template/main.php');
         }

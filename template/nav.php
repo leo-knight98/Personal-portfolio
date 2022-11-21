@@ -37,5 +37,7 @@
                             </ul>
                         </div>
                     </li>
+                    <li class="menu"><a href="?pagina=contact-me"><?php echo $contact ?></a></li>
+                    <li class="menu"><a href="?pagina=register"><?php echo $register ?></a></li>
                 </ul>
             </nav>
