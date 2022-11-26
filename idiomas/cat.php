@@ -34,4 +34,9 @@ $age = "Ets major o menor d'edat?";
 $adult = "Major";
 $minor = "Menor";
 $ok = "El missatge s'ha enviat correctament.";
+$error1 = "Has d'informar un nom";
+$error2 = "L'adreça de correu no és vàlida";
+$error3 = "Has d'escriure el comentari que vols enviar";
+
+$comments = "Comentaris";
 ?>

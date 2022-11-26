@@ -33,4 +33,9 @@ $age = "Are you an adult or a minor?";
 $adult = "Adult";
 $minor = "Minor";
 $ok = "The message was correctly sent";
+$error1 = "You have to input a name";
+$error2 = "Invalid e-mail address";
+$error3 = "You have to write a comment";
+
+$comments = "Comments";
 ?>

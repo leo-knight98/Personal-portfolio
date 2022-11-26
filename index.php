@@ -36,6 +36,10 @@ function build_url($lang) {
     return http_build_query($data);
 }
 
+function load($className) {
+    require_once($className . '.php');
+}
+
 require_once('template/nav.php'); 
 require_once('template/header.php');
 

@@ -1,68 +1,110 @@
 <REGISTRES>
-    <REGISTRE>
-        <DATA>21/11/2022</DATA>
-        <NOM>Leo</NOM>
-        <MAIL>leo.manach98@gmail.com</MAIL>
-        <COMENTARI>Prova per a comprovar el funcionament.</COMENTARI>
-    </REGISTRE>
-    <REGISTRE>
-        <DATA>21/11/2022</DATA>
-        <NOM>Leo</NOM>
-        <MAIL>leo.manach98@gmail.com</MAIL>
-        <COMENTARI>Una altra prova</COMENTARI>
-    </REGISTRE>
-    <REGISTRE>
-        <DATA>21/11/2022</DATA>
-        <NOM>Leo</NOM>
-        <MAIL>leo.manach98@gmail.com</MAIL>
-        <COMENTARI>Una altra prova</COMENTARI>
-    </REGISTRE>
-    <REGISTRE>
-        <DATA>21/11/2022</DATA>
-        <NOM>Leo</NOM>
-        <MAIL>leo.manach98@gmail.com</MAIL>
-        <COMENTARI>Prova per al missatge de correctament</COMENTARI>
-    </REGISTRE>
-    <REGISTRE>
-        <DATA>21/11/2022</DATA>
-        <NOM>Leo</NOM>
-        <MAIL>leo.manach98@gmail.com</MAIL>
-        <COMENTARI>Lakjdfaljfd</COMENTARI>
-    </REGISTRE>
-    <REGISTRE>
-        <DATA>21/11/2022</DATA>
-        <NOM>Leo</NOM>
-        <MAIL>leo.manach98@gmail.com</MAIL>
-        <COMENTARI>Lakjdfaljfd</COMENTARI>
-    </REGISTRE>
-    <REGISTRE>
-        <DATA>21/11/2022</DATA>
-        <NOM>Leo</NOM>
-        <MAIL>leo.manach98@gmail.com</MAIL>
-        <COMENTARI>Lakjdfaljfd</COMENTARI>
-    </REGISTRE>
-    <REGISTRE>
-        <DATA>21/11/2022</DATA>
-        <NOM>Leo</NOM>
-        <MAIL>leo.manach98@gmail.com</MAIL>
-        <COMENTARI>Lakjdfaljfd</COMENTARI>
-    </REGISTRE>
-    <REGISTRE>
-        <DATA>21/11/2022</DATA>
-        <NOM>Leo</NOM>
-        <MAIL>leo.manach98@gmail.com</MAIL>
-        <COMENTARI>Lsdakjfldasjfdksaldfjañkl</COMENTARI>
-    </REGISTRE>
-    <REGISTRE>
-        <DATA>21/11/2022</DATA>
-        <NOM>Leo</NOM>
-        <MAIL>leo.manach98@gmail.com</MAIL>
-        <COMENTARI>Lsdakjfldasjfdksaldfjañkl</COMENTARI>
-    </REGISTRE>
-    <REGISTRE>
-        <DATA>21/11/2022</DATA>
-        <NOM>Leo</NOM>
-        <MAIL>leo.manach98@gmail.com</MAIL>
-        <COMENTARI>Lsdakjfldasjfdksaldfjañkl</COMENTARI>
-    </REGISTRE> 
+<REGISTRE>
+<DATA>26/11/2022, 13:35:16</DATA>
+<NOM>Leo</NOM>
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Hola.</COMENTARI>
+</REGISTRE>
+<REGISTRE> 
+<DATA>26/11/2022, 13:53:27</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Hola.</COMENTARI> 
+</REGISTRE>
+<REGISTRE> 
+<DATA>26/11/2022, 13:53:37</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Missatge.</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 13:54:42</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Missatge.</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 13:54:59</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Missatge. prova</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 13:55:59</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Missatge!!</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 13:56:17</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Missatge!!</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 13:58:10</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Missatge!!</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 13:58:16</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Missatge!!</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 13:58:23</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Missatge!!</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 13:58:34</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Missatge!!</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 13:59:42</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Missatge!!</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 13:59:56</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Missatge!!</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 14:00:05</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Missatge!!</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 14:01:53</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Missatge!!</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 14:41:54</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Ei!</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 14:42:53</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Comentari llarg per a veure com es comporta el flexbox, espero que ara no doni problemes perquè m&#039;hi he matat una bona estona.</COMENTARI> 
+</REGISTRE> 
+<REGISTRE> 
+<DATA>26/11/2022, 14:58:15</DATA>
+<NOM>Leo</NOM> 
+<MAIL>leo.manach98@gmail.com</MAIL>
+<COMENTARI>Comentari llarg per a veure com es comporta el flexbox, espero que ara no doni problemes perquè m&#039;hi he matat una bona estona. ;-)</COMENTARI> 
+</REGISTRE> 
 </REGISTRES>

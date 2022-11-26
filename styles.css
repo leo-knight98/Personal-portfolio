@@ -83,6 +83,30 @@ td.tabla7 {
     padding: 10px 0;
 }
 
+.comments {
+    width: 100%;
+    overflow: scroll;
+}
+
+.comment {
+    margin: 10px auto;
+    border: 2px #064165 solid;
+    border-radius: 20px;
+    width: 55%;
+    padding: 15px 5px;
+    height: max-content;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-left: 25px;
+}
+
+.senar {
+    background-color: lightblue;
+}
+
 @media (min-width: 978px) {
     .container {
         position: absolute;
@@ -328,6 +352,7 @@ td.tabla7 {
     .register-form input[type=text], .register-form input[type=password], .register-form input[type=file] {
         width: 95%;
     }
+
 }
 
 textarea {
