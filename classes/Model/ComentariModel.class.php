@@ -1,6 +1,6 @@
 <?php
 class ComentariModel {
-    const FILE = "llibreDeVisites.xml";
+    const FILE = "contact.xml";
 
     public function __construct() {}
     

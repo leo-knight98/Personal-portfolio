@@ -8,7 +8,7 @@ class UserView extends View{
     }
     
     public function login() {
-        require_once $this->getFitxer();       
+        require_once $this->getFitxer();
         
         include "templates/head.php";
         include "templates/nav.php";
@@ -50,23 +50,15 @@ class UserView extends View{
         ];
         $input_cpass = $this->html_generateInput($options);
         
-        $options = [
-            "type" => "button",
-            "name" => "next",
-            "class" => "next action-button",
-            "value" => "Next"
-        ];
-        $input_bNext = $this->html_generateInput($options);
-        
-         $atributs = [
+        $atributs = [
             "class" => "curt",
             "name" => "tipus",
              "span" => (isset($errorsDetectats["tipus"])) ? $errorsDetectats["tipus"] : ""
         ];
         $opcions = [
-            "NIF" => "NIF: Número d'Identificació Fiscal",
-            "NIE" => "NIE: Número d'Identificació d'Extranjers",
-            "PAS" => "PAS: Passaport"
+            "NIF" => $nif,
+            "NIE" => $nie,
+            "PAS" => $passport
         ];
         $seleccionat = (is_null($this->user->getTipusIdent())) ? "NIF" : $this->user->getTipusIdent();
         $select_Tipus = $this->html_generateSelect($opcions, $seleccionat, $atributs);
@@ -106,35 +98,39 @@ class UserView extends View{
                 "class" => "llarg",
                 "value" => "H",
                 "checked" => ($this->user->getSexe() == "H") ? true : false,
-                "label" => "Home"
-            ],
+                "label" => $male
+            ]];
+        $select_Sexe = $this->html_generateRadioButon($opcions) . "<br>";
+        $opcions = [
             "sexe2" => [
                 "name" => "sexe",
                 "class" => "llarg",
                 "value" => "D",
                 "checked" => ($this->user->getSexe() == "D") ? true : false,
-                "label" => "Dona"
+                "label" => $female
             ]
         ];
-        $select_Sexe = $this->html_generateRadioButon($opcions);
+        $select_Sexe .= $this->html_generateRadioButon($opcions) . "<br>";
+        $opcions = [
+            "sexe3" => [
+                "name" => "sexe",
+                "class" => "llarg",
+                "value" => "NB",
+                "checked" => ($this->user->getSexe() == "NB") ? true : false,
+                "label" => $nb
+            ]
+        ];
+        $select_Sexe .= $this->html_generateRadioButon($opcions);
         
-         $options = [
+        $options = [
             "type" => "text",
             "name" => "naixement",
             "placeholder" => "Data de naixement (Obligatori)",
             "class" => "llarg",
-             "value" => $this->user->getNaixement(),
-             "span" => (isset($errorsDetectats["dNaixement"])) ? $errorsDetectats["dNaixement"] : ""
+            "value" => $this->user->getNaixement(),
+            "span" => (isset($errorsDetectats["dNaixement"])) ? $errorsDetectats["dNaixement"] : ""
         ];
         $input_naixement = $this->html_generateInput($options);
-        
-         $options = [
-            "type" => "button",
-            "name" => "previous",
-            "class" => "previous action-button",
-            "value" => "Previous"
-        ];
-        $input_bPrev = $this->html_generateInput($options);
         
         $options = [
             "class" => "llarg",
@@ -210,9 +206,39 @@ class UserView extends View{
         ];
         $input_bSend = $this->html_generateInput($options);
 
-        $form = "<form action='ok.php' method='post'>
+        $form = "<form method='post'>
+            <label>$email</label><br>
+            $input_email<br>
+            <label>$password_form</label><br>
+            $input_pass<br>
+            <label>$password_confirm</label><br>
+            $input_cpass<br>
+            <label>$id_type</label><br>
+            $select_Tipus<br>
+            <label>$n_id</label><br>
+            $input_dni<br>
             <label>$name</label><br>
-
+            $input_nom<br>
+            <label>$surname</label><br>
+            $input_cognoms<br>
+            <label>$gender</label><br>
+            $select_Sexe<br>
+            <label>$age</label><br>
+            $input_naixement<br>
+            <label>$address<label><br>
+            $input_adreca</br>
+            <label>$cp</label><br>
+            $input_cp<br>
+            <label>$poblacio</label><br>
+            $input_poblacio</br>
+            <label>$region</label><br>
+            $input_provincia<br>
+            <label>$tlf</label><br>
+            $input_telefon<br>
+            $input_maxFileSize
+            <label>$profile</label><br>
+            $input_imatge<br>
+            $input_bSend
         </form>";
         
         include "templates/head.php";

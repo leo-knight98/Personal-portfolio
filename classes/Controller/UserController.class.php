@@ -32,7 +32,7 @@ class UserController extends Controller {
             $sImatge = $this->sanitize($_FILES['imatge']['name'], 0);
             
             if ($sEmail == "") {
-                $errorsDetectats["email"] = "l'email és una dada obligatòria, si us plau indica-la.";
+                $errorsDetectats["email"] = "L'email és una dada obligatòria, si us plau indica-la.";
             } else {
                 if (! $this->esEmail($sEmail)) {
                     $errorsDetectats["email"] = "l'email no té un format adient.";
@@ -122,13 +122,7 @@ class UserController extends Controller {
             $user->telefon = $sTelefon;
             $user->imatge = $sImatge;
              
-            if (! isset($errorsDetectats)) {
-                // Hi ha algun tipus d'error en el formulari d'entrada de dades.
-                // No segueixo fetificant.
-                
-                // No hi ha errors de formulari.....
-                // Verifico la pujada de la foto.
-                
+            if (!isset($errorsDetectats)) {                
                 if ($_FILES['imatge']['error'] == 0) { // Si hi ha foto ....
                     $directoriDePujades ="uploads/";			//carpeta on emmagatzemearem les imatges pujades pels usuaris
                     $formatsImatgesPermesos = array('jpg','jpeg','gif','png','tif','tiff','bmp');		  	//formats permesos
@@ -173,8 +167,6 @@ class UserController extends Controller {
                             $errorsDetectats["imatge"] = "Error2011 - Tipus de fitxer amb extensió no permesa";
                         }
                     } else {
-                        // Si s'ha intentat pujar un fitxer però ha donat error.
-                        // Si no s'ha pujat.... tot ok
                         if ($_FILES['imatge']['error'] != 4) {
                             $errorsDetectats["imatge"] = "Error2010 - No ha pujat el fitxer. Error: " . $error;
                         }
@@ -184,7 +176,6 @@ class UserController extends Controller {
                 if (isset($errorsDetectats)) {
                     $errorsDetectats["error"] = "S'ha detectat algun tipus d'error. Revisa les dades introduides.";
                 } else {
-                    // No hi ha errors en les dades rebudes.
                     $titol = "Procès finalitzat correctament";
                     $missatge = "El procès de registre ha finacilitzat amb éxit, el mail està validat.<br>Ara ja podràs accedir a la noastra àrea privada.<br><br>Moltes gràcies<br>";
                     $vista = new ErrorView();
@@ -198,8 +189,6 @@ class UserController extends Controller {
         
         $vista = new UserView($user);
         $vista->registre($errorsDetectats);
-        
-        
     }
     
     public function passwordforgotten() {

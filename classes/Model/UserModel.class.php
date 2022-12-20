@@ -5,6 +5,7 @@ class UserModel {
     public function __construct() {}
     
     public static function create(User $usuariACrear) {
+        
     }
     
     public static function read() {
