@@ -1,0 +1,1 @@
+<div class="table"><?php echo $taula ?></div>

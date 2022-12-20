@@ -1,0 +1,61 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+function build_url($lang) {
+    $data['lang'] = $lang;
+    if(isset($_GET['pagina'])) {
+        $data['pagina'] = $_GET['pagina'];
+        return http_build_query($data);
+    }
+    return http_build_query($data);
+}
+
+function myAutoload($class) {
+    $carpetas = ["controller", "model", "view"];
+
+    foreach($carpetas as $carpeta) {
+        if(file_exists("classes/$carpeta/$class.class.php")) {
+            include("classes/$carpeta/$class.class.php");
+            return;
+        }
+
+        throw new Exception("No s'ha pogut carregar la classe solicitada");
+    }
+}
+
+spl_autoload_register('myAutoload');
+
+try {
+    $app = new FrontController();
+    $app->dispatch();
+} catch (Exception $e) {
+    $obj = new ErrorView($e);
+    $obj->show();
+}
+
+
+
+$get = $_GET['pagina']; ?>
+<div class="main-section">
+    <?php
+        if($get == 'imagenes') {
+            require_once('ejercicios/captura_imatges.php');
+        } else if($get == 'elementos-html') {
+            require_once('ejercicios/elementos_html.php');
+        } else if($get == 'complejidad-contrasenas') {
+            require_once('ejercicios/contrasenas.php');
+        } else if($get == 'cotizaciones') {
+            require_once('ejercicios/cotizaciones.php');
+        } else if($get == 'contact-me') {
+            require_once('ejercicios/contact.php');
+        } else if($get == 'register') {
+            require_once('ejercicios/registro.php');
+        } else {
+            require_once('template/main.php');
+        }
+    ?>
+</div>
+
+<?php require_once('template/footer.php'); ?>

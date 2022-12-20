@@ -1,6 +1,6 @@
 <?php
-    include_once('functions.php');
-    load('classes/GuestBook');
+    include('functions.php');
+    load('classes/models/GuestBook');
     $isOk = false;
     $frmNom = '';
     $frmMail = '';
