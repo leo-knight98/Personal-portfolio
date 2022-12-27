@@ -9,8 +9,6 @@ class ErrorView extends View {
     
     public function show($param=null) {
         require_once $this->getFitxer();
-        $lang = $this->lang;
-        $html_opacityLang[$lang]="style=\"opacity:1;\"";
        
         $titol = "UNEXPECTED ERROR";
         $missatge = (is_null($this->exception)) 
@@ -25,13 +23,11 @@ class ErrorView extends View {
     
     public function ok($titol, $missatge) {
         require_once $this->getFitxer();
-        $lang = $this->lang;
-        $html_opacityLang[$lang]="style=\"opacity:1;\"";
         
         include "templates/head.php";
         include "templates/nav.php";
         include "templates/header.php";
-        include "templates/tpl_ok.php";
+        include "templates/ok.php";
         include "templates/footer.php";
     }
 }

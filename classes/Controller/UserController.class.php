@@ -166,10 +166,10 @@ class UserController extends Controller {
                         } else {
                             $errorsDetectats["imatge"] = "Error2011 - Tipus de fitxer amb extensió no permesa";
                         }
-                    } else {
-                        if ($_FILES['imatge']['error'] != 4) {
-                            $errorsDetectats["imatge"] = "Error2010 - No ha pujat el fitxer. Error: " . $error;
-                        }
+                    } 
+                } else {
+                    if (!isset($_FILES['imatge'])) {
+                        $errorsDetectats["imatge"] = "Error2010 - No ha pujat el fitxer.";
                     }
                 }
                 
@@ -180,6 +180,9 @@ class UserController extends Controller {
                     $missatge = "El procès de registre ha finacilitzat amb éxit, el mail està validat.<br>Ara ja podràs accedir a la noastra àrea privada.<br><br>Moltes gràcies<br>";
                     $vista = new ErrorView();
                     $vista->ok($titol,$missatge);
+
+                    $model = new UserModel();
+                    $model::create($user);
                     exit();
                 }
             } else {
