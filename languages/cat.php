@@ -18,6 +18,8 @@ $captura = "Captura d'imatges";
 $generador = "Generador d'elements HTML";
 $password = "Generador de contrasenyes";
 $ibex = "Cotitzacions de l'IBEX 35";
+$login = "Inicia sessió";
+$logout = "Tanca la sessió";
 
 $name = "Nom";
 $address = "Adreça";

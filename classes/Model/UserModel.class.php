@@ -5,19 +5,33 @@ class UserModel {
     public function __construct() {}
     
     public static function create(User $usuariACrear) {
+        $email = $usuariACrear->getEmail();
+        $password = $usuariACrear->getPassword();
+        $tipusIdent = $usuariACrear->getTipusIdent();
+        $numeroIdent = $usuariACrear->getNumeroIdent();
+        $nom = $usuariACrear->getNom();
+        $cognoms = $usuariACrear->getCognoms();
+        $sexe = $usuariACrear->getSexe();
+        $naixement = $usuariACrear->getNaixement();
+        $adreca = $usuariACrear->getAdreca();
+        $codiPostal = $usuariACrear->getCodiPostal();
+        $poblacio = $usuariACrear->getPoblacio();
+        $provincia = $usuariACrear->getProvincia();
+        $telefon = $usuariACrear->getTelefon();
+        $imatge = $usuariACrear->getImatge();
+        
         $model = new Model();
         $conn = $model->write;
-        echo "Created conn<br>";
-
-        $stmt = mysqli_prepare($conn, "INSERT INTO tbl_usuaris (email, password, tipusIdent, numeroIdent, nom, cognoms, sexe, naixement, adreca, codiPostal, poblacio, provincia, telefon, imatge) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
-        
-        $stmt->bind_param('ssssssssssssss', $usuariACrear->email, $usuariACrear->password, $usuariACrear->tipusIdent, $usuariACrear->numeroIdent, $usuariACrear->nom, $usuariACrear->cognoms, $usuariACrear->sexe, $usuariACrear->naixement, $usuariACrear->adreca, $usuariACrear->codiPostal, $usuariACrear->poblacio, $usuariACrear->provincia, $usuariACrear->telefon, $usuariACrear->imatge);
+        $sql = "INSERT INTO tbl_usuaris (email, password, tipusIdent, numeroIdent, nom, cognoms, sexe, naixement, adreca, codiPostal, poblacio, provincia, telefon, imatge) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param('ssssssssssssss', $email, $password, $tipusIdent, $numeroIdent, $nom, $cognoms, $sexe, $naixement, $adreca, $codiPostal, $poblacio, $provincia, $telefon, $imatge);
 
         if(!$stmt->execute()) {
             echo "error";
         } else {
-            echo "inserted";
+            echo "executed";
         }
+
         $stmt->close();
         $model->disconnect();
     }
@@ -35,10 +49,19 @@ class UserModel {
         
     }
     
-    public static function getOneByMail($id) {
+    public static function getOneByMail($mail) {
         $model = new Model();
-        
-        $model->disconnect();        
+        $conn = $model->read;
+        $sql = "SELECT id, email, password FROM tbl_usuaris WHERE email = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param('s', $mail);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $user = $result->fetch_all(MYSQLI_ASSOC);
+        $stmt->close();
+        $model->disconnect();
+
+        return $user;
     }
     
     public static function update(User $usuariAModificar) {

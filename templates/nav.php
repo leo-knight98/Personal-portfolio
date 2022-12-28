@@ -1,4 +1,3 @@
-
     <body>
         <div class="container">
             <nav id="nav-bar">
@@ -26,6 +25,12 @@
                         </div>
                     </li>
                     <li class="menu"><a href="?contact/show"><?php echo $contact ?></a></li>
-                    <li class="menu"><a href="?user/registre"><?php echo $register ?></a></li>
+                    <?php if(isset($_SESSION['user_id'])) { ?>
+                        <li class="menu"><a href="?user/logout"><?php echo $logout ?></a></li>
+                    <?php } else { ?>
+                        <li class="menu"><a href="?user/registre"><?php echo $register ?></a></li>
+                        <li class="menu"><a href="?user/login"><?php echo $login ?></a></li>
+                    <?php } ?>
+                    
                 </ul>
             </nav>

@@ -6,8 +6,33 @@ class UserController extends Controller {
     }
     
     public function login() {
+        if(($_SERVER["REQUEST_METHOD"] == "POST") && ($_POST["submit"] != null)) {
+            $sEmail = $this->sanitize($_POST["email"], 1);
+            $sPassword = $this->sanitize($_POST["pass"], 0);
+
+            if($sEmail == "" || $sPassword == "") {
+                $errorsDetectats = "L'usuari o la contrasenya són incorrectes";
+            } else if(!$this->esEmail($sEmail)) {
+                $errorsDetectats = "El correu electrònic no és correcte";
+                unset($sEmail);
+            } else {
+                $model = new UserModel();
+                $lUser = $model::getOneByMail($sEmail);
+                if(count($lUser) == 0) {
+                    $errorsDetectats = "No estàs registrat";
+                } else {
+                    if($lUser[0]['password'] != $sPassword) {
+                        $errorsDetectats = "Contrasenya incorrecta";
+                    } else {
+                        $_SESSION['user_id'] = $lUser[0]['id'];
+                        header("Location: ?/home/show");
+                        return;
+                    }
+                }
+            }
+        }
         $vista = new UserView();
-        $vista->login();
+        $vista->login();        
     }
     
     public function registre() {
@@ -192,6 +217,11 @@ class UserController extends Controller {
         
         $vista = new UserView($user);
         $vista->registre($errorsDetectats);
+    }
+
+    public function logout() {
+        session_unset();
+        header("Location: ?/home/show");
     }
     
     public function passwordforgotten() {

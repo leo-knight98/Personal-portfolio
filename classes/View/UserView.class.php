@@ -9,6 +9,40 @@ class UserView extends View{
     
     public function login() {
         require_once $this->getFitxer();
+
+        $options = [
+            "type" => "text",
+            "name" => "email",
+            "placeholder" => "email",
+            "class" => "llarg",
+            "span" => (isset($errorsDetectats["email"])) ? $errorsDetectats["email"] : "",
+        ];
+        $input_email = $this->html_generateInput($options);
+
+        $options = [
+            "type" => "password",
+            "name" => "pass",
+            "placeholder" => "Contrasenya",
+            "class" => "llarg",
+            "span" => (isset($errorsDetectats["pass"])) ? $errorsDetectats["pass"] : "",
+        ];
+        $input_pass = $this->html_generateInput($options);
+
+        $options = [
+            "type" => "submit",
+            "name" => "submit",
+            "class" => "submit action-button",
+            "value" => "Envia Dades"
+        ];
+        $input_bSend = $this->html_generateInput($options);
+
+        $form = "<form method='post'>
+            <label>$email</label><br>
+            $input_email<br>
+            <label>$password_form</label><br>
+            $input_pass<br>
+            $input_bSend
+        </form>";
         
         include "templates/head.php";
         include "templates/nav.php";

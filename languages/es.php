@@ -17,6 +17,8 @@ $captura = "Captura de imágenes";
 $generador = "Generador de elementos HTML";
 $password = "Generador de contraseñas";
 $ibex = "Cotizaciones del IBEX 35";
+$login = "Inicia sesión";
+$logout = "Cierra la sesión";
 
 $name = "Nombre";
 $address = "Dirección";
