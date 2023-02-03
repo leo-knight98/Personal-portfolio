@@ -1,34 +1,27 @@
 <?php
     class Model {
-        public $read;
-        public $write;
+        public static $instance;
 
-        public function __construct() {
-            $this->read = $this->getRead();
-            $this->write = $this->getWrite();
-        }
+        public function __construct() {}
 
-        private function getRead() {
-            if($this->read != null) {
-                return $this->read;
+        public static function getInstance() {
+            if(self::$instance != null) {
+                return self::$instance;
             } else {
-                $this->read = mysqli_connect("localhost", "usr_consulta", "2022@Thos", "personal_page") or die("No s'ha pogut connectar");
-                return $this->read;
+                try {
+                    self::$instance = new PDO('mysql:host=localhost;dbname=myweb', 'usr_generic', '2022@Thos');
+                    return self::$instance;
+                } catch(PDOException $e) {
+                    echo "Connection failed: " . $e->getMessage();
+                }
+                
             }
         }
 
-        private function getWrite() {
-            if($this->write != null) {
-                return $this->write;
-            } else {
-                $this->write = mysqli_connect("localhost", "usr_generic", "2022@Thos", "personal_page") or die("No s'ha pogut connectar");
-                return $this->write;
-            }
+        public static function disconnect() {
+            self::$instance = null;
         }
 
-        public function disconnect() {
-            mysqli_close($this->read);
-            mysqli_close($this->write);
-        }
+        private function clone(){}
     }
 ?>
